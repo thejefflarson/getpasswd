@@ -5,7 +5,7 @@ ifeq ($(U),Darwin)
 endif
 ifeq ($(U),Linux)
 	CC = clang
-	CFLAGS = -fsanitize=address $(pkg-config gnome-keyring --libs --cflags)
+	LDLIBS = `pkg-config libsecret-1 --libs --cflags`
 endif
 
 getpasswd: getpasswd.c
