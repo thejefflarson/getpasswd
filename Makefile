@@ -13,5 +13,5 @@ getpasswd: getpasswd.c
 clean:
 	rm getpasswd
 
-install:
-	cp getpasswd /usr/local/bin/
+install: getpasswd
+	cp $< /usr/local/bin/

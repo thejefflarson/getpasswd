@@ -26,6 +26,7 @@ static void get(const char *service, const char *username) {
   if(status == noErr) {
     for(uint32_t i = 0; i < password_length; i++)
       putchar(password[i]);
+    puts("");
   } else {
     exit(EXIT_FAILURE);
   };
@@ -60,7 +61,7 @@ static void get(const char *service, const char *username) {
   } else if (password == NULL) {
     exit(EXIT_FAILURE);
   } else {
-    printf("%s", password);
+    printf("%s\n", password);
     secret_password_free(password);
   }
 }
